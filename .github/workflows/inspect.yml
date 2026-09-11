@@ -8,8 +8,8 @@ jobs:
         uses: actions/checkout@v4
       - name: print vm details
         run: | 
-        uname -s
-        ls
+          uname -s
+          ls
       - name: print no of files
         run: find / -type f | wc -l
 
