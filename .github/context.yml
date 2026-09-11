@@ -1,0 +1,14 @@
+name: context flow
+on: push
+jobs:
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print the details
+        run: |
+          echo $((github.repository))
+          echo $((github.ref))
+          echo $((github.sha))
+          echo $((github.event))
+          echo $((runner.os))
+
