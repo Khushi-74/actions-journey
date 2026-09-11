@@ -1,0 +1,9 @@
+name: esc bash workflow
+on: push
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print welcome msg
+        run: echo "hello welcome to the repo"
+
