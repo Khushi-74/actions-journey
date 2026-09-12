@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: version
         id: ver
-        run: echo"version=1.1.1" >> "$GITHUB_OUTPUT"
+        run: echo "version=1.1.1" >> "$GITHUB_OUTPUT"
   test:
     needs: build
     runs-on: ubuntu-latest
