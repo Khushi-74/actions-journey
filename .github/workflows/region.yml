@@ -1,0 +1,8 @@
+name: github variables
+on: push
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print the deployed region
+        run: echo "{{ vars.DEPLOY_REGION }}
