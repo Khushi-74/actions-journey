@@ -1,0 +1,17 @@
+name: env-demmo
+on: push
+env:
+  APP_NAME: journey
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: info
+    steps:
+      - name: step1
+        run: echo "$APP_NAME $LOG_LEVEL"
+      - name: steps2
+        env:
+          LOG_LEVEL: debug
+        run: echo "$APP_NAME $LOG_LEVEL"
+      
