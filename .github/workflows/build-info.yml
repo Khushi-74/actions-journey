@@ -7,5 +7,5 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: print the commit , version information
-        uses: .github/actions/build-info
+        uses: ./.github/actions/build-info
 

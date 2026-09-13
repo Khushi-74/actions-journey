@@ -1,5 +1,8 @@
 name: release
-on: push
+on: 
+  push:
+    branches-ignore:
+      - main
 jobs:
   callerjob:
     uses: ./.github/workflows/notify.yml
