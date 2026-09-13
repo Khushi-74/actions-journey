@@ -1,22 +1,9 @@
 name: release
-on:
-  push:
-    branches-ignore:
-      - main
+on: push
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print msg
-        run: echo "hello"
-  unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print msg 2
-        run: echo "in unit test"
-  package:
-    needs: [lint, unit-tests]
-    runs-on: ubuntu-latest
-    steps:
-      - name: package job
-        run: echo "in package"
+  callerjob:
+    uses: ./.github/workflows/notify.yml
+    with:
+      environment: "tests"
+    secrets:
+      NOTIFY_TOKEN: ${{ secrets.NOTIFY_TOKEN }}
