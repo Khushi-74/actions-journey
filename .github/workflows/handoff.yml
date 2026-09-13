@@ -21,7 +21,7 @@ jobs:
           name: app-package
       - name: check app.txt present or not
         run: |
-          if [ -f app.txt]; then
+          if [ -f app.txt ]; then
           echo "exists"
           else
             exit 1
