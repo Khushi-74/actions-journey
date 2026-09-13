@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: calendar >> app.txt
+        run: date >> app.txt
       - name: upload artifaact
         uses: actions/upload-artifact@v4
         with: 
