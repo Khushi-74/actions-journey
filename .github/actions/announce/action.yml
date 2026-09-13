@@ -1,0 +1,11 @@
+name: composite action
+description: a composite action
+inputs:
+  app-name:
+    required: true
+    description: name of app recirevd from the workflow
+runs:
+  using: composite
+  steps:
+    - run: echo "${{ inputs.app-name }}"
+      shel: bash
