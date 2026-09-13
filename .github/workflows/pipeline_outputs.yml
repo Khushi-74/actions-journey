@@ -1,0 +1,27 @@
+name: job-dependency
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  build:
+    outputs:
+      version: ${{ steps.ver.outputs.version }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: version
+        id: ver
+        run: echo "version=1.1.1" >> "$GITHUB_OUTPUT"
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: dummy
+        run: ls
+  deploy:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: read version from build job
+        run: echo "${{ needs.build.outputs.version }}"
+
