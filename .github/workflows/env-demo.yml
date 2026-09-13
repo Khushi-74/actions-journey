@@ -1,5 +1,8 @@
 name: env-demmo
-on: push
+on:
+  push:
+    branches-ignore:
+      - main
 env:
   APP_NAME: journey
 jobs:

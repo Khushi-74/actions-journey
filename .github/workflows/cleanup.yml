@@ -1,5 +1,8 @@
 name: cleanup
-on: push
+on: 
+  push:
+    branches-ignore:
+      - main
 jobs:
   myjob:
     runs-on: ubuntu-latest

@@ -1,5 +1,8 @@
 name: job-dependency
-on: push
+on:
+  push:
+    branches-ignore:
+      - main
 jobs:
   build:
     outputs:

@@ -1,5 +1,8 @@
 name: label flow
-on: push
+on:
+  push:
+    branches-ignore:
+      - main
 jobs:
   labeljob:
     runs-on: ubuntu-latest
