@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checout@v4
+        uses: actions/checkout@v4
       - name: use actoion
         uses: ./.github/actions/announce
         with:
