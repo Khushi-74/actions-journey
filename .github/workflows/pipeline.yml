@@ -1,5 +1,8 @@
 name: caller-pipeline
-on: push
+on:
+  push:
+    branches-ignore:
+      - main
 jobs:
   callerjob:
     uses: ./.github/workflows/checks.yml

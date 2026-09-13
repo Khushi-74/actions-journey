@@ -11,5 +11,5 @@ jobs:
   actionjob:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "{{ inputs.environment }}"
+      - run: echo "${{ inputs.environment }}"
 
