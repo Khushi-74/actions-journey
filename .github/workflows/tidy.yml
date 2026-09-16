@@ -1,0 +1,15 @@
+name: guardrails
+on: push
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: checkout code and print no of files
+        uses: actions/checkout@v4
+      - name: count files
+        run: ls -la | wc -l
+
